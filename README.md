@@ -23,8 +23,8 @@ CREATE DATABASE test
        CONNECTION LIMIT = -1;
 ```
 
- Создание таблицы и индекса
-----------------------------
+Создание таблицы и индекса
+--------------------------
 ```sql
 -- DROP TABLE mind;
 
@@ -52,4 +52,13 @@ CREATE INDEX mind_idx
   ON mind
   USING gin
   (to_tsvector('english'::regconfig, expr) );
+```
+
+Ищем слово friend в поле expr таблицы mind
+------------------------------------------
+```sql
+-- Запрос
+SELECT expr
+FROM mind
+WHERE to_tsvector('english', expr) @@ to_tsquery('english', 'friend');
 ```

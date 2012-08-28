@@ -3,15 +3,17 @@ PostgreSQL
 
 Мои примеры PostgreSql
 
- Инструменты
--------------
+Инструменты
+-----------
  * OpenServer - http://open-server.ru/download.html
  * pgAdmin (администрирование) - http://www.pgadmin.org/download/
 
 
- Создание базы данных
-----------------------
-```
+
+
+Создание базы данных
+--------------------
+```sql
 CREATE DATABASE test
   WITH OWNER = postgres
        ENCODING = 'UTF8'
@@ -23,7 +25,7 @@ CREATE DATABASE test
 
  Создание таблицы и индекса
 ----------------------------
-```
+```sql
 -- DROP TABLE mind;
 
 CREATE TABLE mind
@@ -41,6 +43,7 @@ COMMENT ON COLUMN mind.pk IS 'ID логического высказывания
 COMMENT ON COLUMN mind.expr IS 's-выражение lisp в виде строки';
 
 
+-- Индекс для быстрого полнотекстового поиска
 -- Index: mind_idx
 
 -- DROP INDEX mind_idx;

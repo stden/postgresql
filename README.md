@@ -5,11 +5,8 @@ PostgreSQL
 
 Инструменты
 -----------
- * OpenServer - http://open-server.ru/download.html
+ * OpenServer - http://open-server.ru/download.html (входит Apache, MySQL, PostgeSQL, PHP)
  * pgAdmin (администрирование) - http://www.pgadmin.org/download/
-
-
-
 
 Создание базы данных
 --------------------
